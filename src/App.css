@@ -5,18 +5,24 @@
   font-family: "Times New Roman", Times, serif;
   flex-direction: column;
   padding: 30px;
+  margin: 0;
+  background-color: rgb(235, 244, 247);
 }
 
 .grid-main {
   display: grid;
   grid-template-columns: auto auto auto;
   grid: 20px;
+  margin: 10px;
 }
 
 .grid-child {
-  border: 1px solid #e0e0e0;
+  margin: 10px;
+  border: 1px solid #7a7272;
   padding: 20px;
   border-radius: 10px;
+  background-color: #f0f0f0;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .news-image {
@@ -49,8 +55,12 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 370px;
+  font-size: large;
+  margin: 4px;
+  position: fixed;
+  right: 0;
 }
 
 .select-box {
@@ -59,4 +69,44 @@
   border: 1px solid #e0e0e0;
   outline: none;
   padding: 10px;
+}
+
+.logo-img {
+  height: 27vmin;
+  border-radius: 15%;
+  padding: 0 5%;
+  margin: 3% 0;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Media query for small devices like mobile phones */
+@media (max-width: 767px) {
+  .grid-main {
+    grid-template-columns: auto auto;
+  }
+}
+
+/* Media query for medium devices like tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-main {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/* Media query for large devices like desktops and laptops */
+@media (min-width: 1024px) {
+  .grid-main {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+/* Media query for extra small devices like very small phones */
+@media (max-width: 479px) {
+  .grid-main {
+    grid-template-columns: auto;
+  }
 }

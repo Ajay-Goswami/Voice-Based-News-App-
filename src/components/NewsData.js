@@ -33,23 +33,35 @@ export default function NewsData() {
   //   console.log(newsData?.data?.articles);
   return (
     <div className="main">
-      <h1>Voice News</h1>
-      <div className="select">
-        <label htmlFor="news">Choose a Category</label>
-        <select
-          className="select-box"
-          name="category"
-          id="category"
-          onChange={selectCategory}
-          value={selectOption}
-        >
-          <option value="General">General</option>
-          <option value="health">health</option>
-          <option value="Business">Business</option>
-          <option value="Technology">Technology</option>
-          <option value="Sports">Sports</option>
-        </select>
+      <div className="header">
+        <div>
+          <img
+            src="https://pluspng.com/img-png/news-update-png--1097.png"
+            className="logo-img"
+            alt="logo"
+          />
+        </div>
+
+        <div className="select">
+          <label htmlFor="news">Choose a Category</label>
+          <select
+            className="select-box"
+            name="category"
+            id="category"
+            onChange={selectCategory}
+            value={selectOption}
+          >
+            <option value="General">General</option>
+            <option value="health">health</option>
+            <option value="Business">Business</option>
+            <option value="Technology">Technology</option>
+            <option value="Sports">Sports</option>
+            <option value="Science">Science</option>
+            <option value="entertainment">Entertainment</option>
+          </select>
+        </div>
       </div>
+
       <div className="grid-main">
         {newsData?.map((news) => {
           return (
